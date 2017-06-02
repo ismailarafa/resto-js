@@ -1,0 +1,47 @@
+@import 'cc-ss_colors';
+
+.container {
+  width: 100%;
+  background-color: $black;
+  min-height: 100vh;
+  padding: 4%;
+
+  h1 {
+    color: $silver;
+    text-align: center;
+  }
+
+  img {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  h2 {
+    color: $silver;
+  }
+
+  p {
+    color: $silver;
+    font-weight: 300;
+  }
+
+  i {
+    color: $silver;
+    cursor: pointer;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+
+    &:hover {
+      color: darken($silver, 15%);
+    }
+  }
+
+  .fa-arrow-right {
+    float: right;
+  }
+
+  .fa-arrow-left {
+    float: left;
+  }
+}
