@@ -51,11 +51,10 @@ var handlers = {
   createAboutPage: function () {
     var mainDiv = document.querySelector('div');
     mainDiv.innerHTML = '';
-    mainDiv.appendChild(model.createHeader('KababatoryOrigins'));
+    mainDiv.appendChild(model.createHeader('Kababatory Origins'));
     mainDiv.appendChild(model.createHeroImage('images/prince.jpg'));
     mainDiv.appendChild(model.createSecondHeader("A Prince's Journey"));
     mainDiv.appendChild(model.createText("The story of the prince is one of persistence, hard work and real dedication to one's craft. Starting off on a cart, he slowly built his empire through his infamous liver sandwiches and quickly became a staple in street food, subsequently expanding into a full-blown restaurant where he can fulfill his passion of serving irresistible meats."));
-    mainDiv.appendChild(model.createNavBtn(true));
     mainDiv.appendChild(model.createNavBtn(false));
   }
 };
@@ -78,15 +77,12 @@ var view = {
     var p = document.querySelector('p').innerHTML;
     mainDiv.addEventListener('click', function (event) {
       var elementClicked = event.target;
-      if (elementClicked.className === 'fa fa-arrow-right fa-lg fa-2x' && p.indexOf('halal') > 0) {
+      if (elementClicked.className === 'fa fa-arrow-right fa-lg fa-2x' && p.indexOf('halal') !== -1) {
         handlers.createMenuPage();
-      } else if (elementClicked.className === 'fa fa-arrow-right fa-lg fa-2x' &&
-                p.indexOf('1-800') > 0) {
+      } else if (elementClicked.className === 'fa fa-arrow-left fa-lg fa-2x' || p.indexOf('call') !== -1) {
+        view.createHomePage();
+      } else if (p.indexOf('call') !== -1 && elementClicked.className === 'fa fa-arrow-right') {
         handlers.createAboutPage();
-      } else if (elementClicked.className === 'fa fa-arrow-left fa-lg fa-2x' && p.indexOf('prince') > 0) {
-        view.createMenuPage();
-      } else if (elementClicked.className === 'fa fa-arrow-left fa-lg fa-2x' && p.indexOf('1-800') > 0) {
-        handlers.createHomePage();
       }
     });
   }
