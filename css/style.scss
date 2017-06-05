@@ -7,28 +7,32 @@ body {
 .container {
   width: 100%;
   background-color: $black;
-  min-height: 100vh;
   padding: 4%;
 
   h1 {
     color: $silver;
     text-align: center;
+    margin: 0;
   }
 
   img {
     width: 50%;
     display: block;
     margin: auto;
-    margin-bottom: 2%;
+    margin-top: 2%;
+    border: 6px solid $gray;
   }
 
   h2 {
     color: $silver;
+    margin-top: 0.25%;
   }
 
   p {
     color: $silver;
     font-weight: 300;
+    margin: 0;
+    margin-bottom: 1.5%;
   }
 
   i {
@@ -36,6 +40,7 @@ body {
     cursor: pointer;
     -webkit-transition: all 0.1s;
     transition: all 0.1s;
+    margin: 0;
 
     &:hover {
       color: darken($silver, 15%);
