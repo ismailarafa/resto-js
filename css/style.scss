@@ -1,5 +1,9 @@
 @import 'cc-ss_colors';
 
+body {
+  background-color: $black;
+}
+
 .container {
   width: 100%;
   background-color: $black;
@@ -15,6 +19,7 @@
     width: 50%;
     display: block;
     margin: auto;
+    margin-bottom: 2%;
   }
 
   h2 {
